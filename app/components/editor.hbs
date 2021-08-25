@@ -1,0 +1,12 @@
+<div class="editor-container">
+  <AuHeading
+    @level="4"
+    @skin="4"
+  >
+    endpoint: <input type='text' value={{endpoint}} {{on 'change' @setEndpoint}} />
+  </AuHeading>
+  <YasguiIntegration as |Yasgui|>
+    <Yasgui.editor @endpoint={{@endpoint}} />
+    <Yasgui.results />
+  </YasguiIntegration>
+</div>
