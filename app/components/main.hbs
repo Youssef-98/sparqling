@@ -1,0 +1,15 @@
+<Main::Header />
+<AuMainContainer as |m|>
+  <m.sidebar>
+    <Main::Sidebar />
+  </m.sidebar>
+  <m.content @scroll={{true}}>
+    <div class="body">
+      <AuHeading>
+        {{@title}}
+        <hr />
+      </AuHeading>
+      {{yield}}
+    </div>
+  </m.content>
+</AuMainContainer>
