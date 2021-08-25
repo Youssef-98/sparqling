@@ -3,10 +3,14 @@ import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 
 export default class IndexController extends Controller {
-  @tracked endpoint = 'https://codex.opendata.api.vlaanderen.be:8888/sparql';
+  @tracked endpoint = 'https://dbpedia.org/sparql';
 
   @action
   setEndpoint(e) {
-    this.endpoint = e.target.value;
+    if (e.target.value === '') {
+      this.endpoint = '';
+    } else {
+      this.endpoint = e.target.value;
+    }
   }
 }
