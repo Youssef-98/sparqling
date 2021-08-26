@@ -1,0 +1,68 @@
+<section>
+  <AuHeading class="title">
+    Anatomy
+    <AuHr />
+  </AuHeading>
+
+  <div>
+    <AuHeading id="select" @level="2" @skin="4">SELECT</AuHeading>
+    <CodeBlock 
+      @code="
+        # Shorthands
+        PREFIX schema: <http://schema.org/>
+        PREFIX foaf:   <http://xmlns.com/foaf/0.1/>
+
+        # Define tabular dataset
+        SELECT …
+        FROM <>
+        WHERE { 
+          …  # Query pattern
+        }
+
+        ORDER BY … 
+        GROUP BY … 
+        HAVING …
+        LIMIT … 
+        OFFSET …
+      "
+    />
+  </div><br>
+  
+  <div>
+    <AuHeading id="construct" @level="2" @skin="4">CONSTRUCT</AuHeading>
+    <CodeBlock 
+      @code="
+        # Shorthands
+        PREFIX schema: <http://schema.org/>
+        PREFIX foaf:   <http://xmlns.com/foaf/0.1/>
+
+        # Define RDF dataset
+        CONSTRUCT {
+
+        }
+        WHERE { 
+          …  # Query pattern
+        }
+      "
+    />
+  </div><br>
+
+  <div>
+    <AuHeading id="ask" @level="2" @skin="4">ASK</AuHeading>
+    <CodeBlock 
+      @code="
+        # Shorthands
+        PREFIX schema: <http://schema.org/>
+        PREFIX foaf:   <http://xmlns.com/foaf/0.1/>
+
+        ASK { 
+          …  # Query pattern
+        }
+      "
+    />
+  </div><br>
+
+  <div>
+    <AuHeading id="describe" @level="2" @skin="4">DESCRIBE</AuHeading>
+  </div>
+</section>
