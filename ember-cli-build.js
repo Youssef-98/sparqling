@@ -10,6 +10,10 @@ module.exports = function (defaults) {
         'node_modules/@appuniversum/ember-appuniversum/app/styles',
       ],
     },
+    snippetPaths: ['snippets'],
+    'ember-prism': {
+      theme: 'okaidia',
+    },
   });
 
   // Use `app.import` to add additional libraries to the generated
