@@ -8,4 +8,5 @@ export default class Router extends EmberRouter {
 
 Router.map(function () {
   this.route('types', { path: 'query-types' });
+  this.route('playground');
 });

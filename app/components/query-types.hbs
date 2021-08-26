@@ -1,3 +1,55 @@
-{{#let (get-code-snippet "anatomy-select.js") as |snippet|}}
+<p>There are 4 distinct types of queries that can be used in SPARQL</p><br>
+<div class="au-o-grid">
+  <div class="au-o-grid__item au-u-1-2">
+    <AuCard @flex={{true}} as |c|>
+      <c.header @badgeNumber="1" @badgeSkin="brand">
+        <AuHeading @level="2" @skin="4">
+          SELECT
+        </AuHeading>
+      </c.header>
+      <c.content>
+        <p>Returns tabular data that matches a query pattern.</p>
+      </c.content>
+    </AuCard>
+  </div>
+  <div class="au-o-grid__item au-u-1-2">
+    <AuCard @flex={{true}} as |c|>
+      <c.header @badgeNumber="2" @badgeSkin="brand">
+        <AuHeading @level="2" @skin="4">
+          CONSTRUCT
+        </AuHeading>
+      </c.header>
+      <c.content>
+        <p>Returns an RDF graph constructed by substituting variables in the set of triple templates.</p>
+      </c.content>
+    </AuCard>
+  </div>
+  <div class="au-o-grid__item au-u-1-2">
+    <AuCard @flex={{true}} as |c|>
+      <c.header @badgeNumber="3" @badgeSkin="brand">
+        <AuHeading @level="2" @skin="4">
+          ASK
+        </AuHeading>
+      </c.header>
+      <c.content>
+        <p>Returns a boolean indicating whether a query pattern matches or not.</p>
+      </c.content>
+    </AuCard>
+  </div>
+  <div class="au-o-grid__item au-u-1-2">
+    <AuCard @flex={{true}} as |c|>
+      <c.header @badgeNumber="4" @badgeSkin="brand">
+        <AuHeading @level="2" @skin="4">
+          DESCRIBE
+        </AuHeading>
+      </c.header>
+      <c.content>
+        <p>Returns an RDF graph that describes the resources found.</p>
+      </c.content>
+    </AuCard>
+  </div>
+</div>
+
+{{!-- {{#let (get-code-snippet "hello.js") as |snippet|}}
   <CodeBlock @language={{snippet.language}} @code={{snippet.source}} />
-{{/let}}
+{{/let}} --}}
