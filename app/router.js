@@ -11,6 +11,6 @@ Router.map(function () {
   this.route('playground');
 
   this.route('hands-on', function () {
-    this.route('exercises');
+    this.route('part1', { path: 'exercise-1' });
   });
 });
