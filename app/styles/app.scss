@@ -115,18 +115,27 @@
   color: black;
 }
 
-/* .editor-container {
-  margin-top: 10px;
+/* input field above the sparql-editor */
+.editor-input {
+  border: 0.1rem solid #ccd1d9;
+  border-radius: 0.3rem;
+  color: #000;
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 0 1.2rem 0.1ex;
+  min-width: 60%;
+  height: 3.6rem;
+}
 
-  .editor-input {
-    border: 0.1rem solid #ccd1d9;
-    border-radius: 0.3rem;
-    color: #000;
-    font-size: 1.6rem;
-    font-weight: 400;
-    padding: 0 1.2rem 0.1ex;
-    min-width: 60%;
-    height: 3.6rem;
-    margin-bottom: 10px;
+.part1-container {
+  display: flex;
+  justify-content: space-between;
+
+  .part1-exercise {
+    width: 60%;
   }
-} */
+
+  .part1-hints {
+    width: 40%;
+  }
+}
