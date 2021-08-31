@@ -1,8 +1,8 @@
-<AuButton {{on "click" (fn (mut this.popup) true)}}>{{@title}}</AuButton>
+<AuButton {{on "click" (fn (mut @popup) true)}}>{{@title}}</AuButton>
 <AuModal 
-  @modalTitle={{@modalTitle}} 
-  @modalOpen={{this.popup}} 
-  @closeModal={{fn (mut this.popup) false}} as |Modal|>
+  @modalTitle={{@modalTitle}}
+  @modalOpen={{@popup}} 
+  @closeModal={{fn (mut @popup) false}} as |Modal|>
   <Modal.Body>
     {{yield}}
   </Modal.Body>

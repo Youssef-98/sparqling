@@ -6,8 +6,18 @@
   </div>
 
   <div class="part1-hints">
-    <Exercise::Hint @title="Hint"  @modalTitle="Hint">
-      You can use <AuPill>rdf:type</AuPill> to call out the types.
+    <Exercise::Hint @popup={{this.popup}} @title="Hint" @modalTitle="rdf:type">
+      <p>You can use <AuPill>rdf:type</AuPill> in your query to get the types.</p>
+    </Exercise::Hint>
+
+    <Exercise::Hint @popup={{this.popup}} @title="Solution" @modalTitle="Solution">
+      <CodeBlock 
+        @code="  
+          SELECT DISTINCT ?type
+          WHERE {
+              ?foo rdf:type ?type.
+          }"
+      />
     </Exercise::Hint>
   </div>
 </div>
