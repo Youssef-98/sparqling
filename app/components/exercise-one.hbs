@@ -12,11 +12,13 @@
 
     <Exercise::Hint @popup={{this.popup}} @title="Solution" @modalTitle="Solution">
       <CodeBlock 
-        @code="  
+        @code="
+          PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
           SELECT DISTINCT ?type
           WHERE {
               ?foo rdf:type ?type.
-          }"
+          } LIMIT 10"
       />
     </Exercise::Hint>
   </div>
