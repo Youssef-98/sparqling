@@ -1,8 +1,5 @@
 <section>
-  <AuHeading class="title">
-    Anatomy
-    <AuHr />
-  </AuHeading>
+  <AuHeading class="title">Anatomy <AuHr /></AuHeading>
 
   <div>
     <AuHeading id="select" @level="2" @skin="4">SELECT</AuHeading>
@@ -57,12 +54,20 @@
 
         ASK { 
           …  # Query pattern
-        }
-      "
+        }"
     />
   </div><br>
 
   <div>
     <AuHeading id="describe" @level="2" @skin="4">DESCRIBE</AuHeading>
+    <AuHeading @level="6" @skin="6">What do you know about Alice?</AuHeading>
+    <CodeBlock @code="DESCRIBE <http://example.org/alice>" />
+    <AuHeading @level="6" @skin="6">What do you know about subjects that have as mail address alice@org?</AuHeading>
+    <CodeBlock 
+      @code="
+        DESCRIBE ?x WHERE {
+            ?x foaf:mbox mailto:alice@org
+        }" 
+    />
   </div>
 </section>
