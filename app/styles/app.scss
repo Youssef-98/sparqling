@@ -132,10 +132,20 @@
   justify-content: space-between;
 
   .part1-exercise {
-    width: 60%;
+    width: 55%;
   }
 
   .part1-hints {
-    width: 40%;
+    width: 45%;
   }
+}
+
+/*Shows the codeblock for the solution when clicked*/
+.codeblock {
+  display: none;
+}
+
+.codeblock.is-visible {
+  display: block;
+  padding: 10px;
 }

@@ -12,8 +12,9 @@
       <p>You can use <AuPill>rdf:type</AuPill> in your query to get the types.</p>
     </Exercise::Hint>
 
-    <Exercise::Hint @popup={{this.popup}} @title="Solution" @modalTitle="Solution">
-      <CodeBlock 
+    <AuButton {{on "click" (fn this.showSnippet true)}}>Solution</AuButton>
+    <div class="codeblock {{if this.isOpen "is-visible"}}">
+      <CodeBlock
         @code="
           PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 
@@ -22,6 +23,6 @@
               ?foo rdf:type ?type.
           } LIMIT 10"
       />
-    </Exercise::Hint>
+    </div>
   </div>
 </div>
