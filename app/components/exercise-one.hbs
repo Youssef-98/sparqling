@@ -12,7 +12,9 @@
       <p>You can use <AuPill>rdf:type</AuPill> in your query to get the types.</p>
     </Exercise::Hint>
 
-    <AuButton {{on "click" (fn this.showSnippet true)}}>Solution</AuButton>
+    <AuButton {{on "click" (fn this.showSnippet true)}}>
+      {{if this.isOpen "Hide solution" "Solution"}}
+    </AuButton>
     <div class="codeblock {{if this.isOpen "is-visible"}}">
       <CodeBlock
         @code="
