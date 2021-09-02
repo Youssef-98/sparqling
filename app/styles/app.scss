@@ -109,6 +109,7 @@
   margin-bottom: 40px;
 }
 
+/* Link tags in Query Types route won't change color when clicked/visited */
 .query-types a:link,
 .query-types a:visited {
   text-decoration: none !important;
@@ -127,25 +128,42 @@
   height: 3.6rem;
 }
 
+/* Container for Exercise Part 1 */
 .part1-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   .part1-exercise {
-    width: 55%;
+    flex-basis: 45%;
+    order: 1;
   }
 
-  .part1-hints {
-    width: 45%;
+  .exercise-editor {
+    order: 2;
+    flex-basis: 55%;
   }
 }
 
-/*Shows the codeblock for the solution when clicked*/
+/* Links beneath the exercise */
+.exercise-links {
+  order: 3; /* sets the links beneath the question and editor of the exercise */
+  width: 100%;
+  margin-top: 15px;
+  font-size: 18px;
+}
+/* link in part 1 - exercise 1 */
+.exercise-links.part1-1 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* codeblock for the solution that's invisible when not clicked */
 .codeblock {
   display: none;
 }
-
+/* Shows the codeblock for the solution when clicked */
 .codeblock.is-visible {
   display: block;
-  padding: 10px;
+  padding-right: 20px;
 }

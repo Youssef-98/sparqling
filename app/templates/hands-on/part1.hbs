@@ -1,4 +1,10 @@
 {{page-title "Part 1"}}
 <Main @title="Exercise - Part 1">
-  <ExerciseOne />
+  <div class="part1-container">
+    {{outlet}}
+    <div class="exercise-editor">
+      <Editor />
+    </div>
+  </div>
+  {{yield}}
 </Main>
