@@ -1,0 +1,33 @@
+<div class="part1-exercise">
+  <AuHeading @level="4" @skin="4">3. <b>Describe</b> one of our artists</AuHeading>
+  <AuHelpText>
+    The data point is: <AuPill>&lt;http://purl.org/ontology/mo/&gt;</AuPill>
+  </AuHelpText><br>
+
+  <Exercise::Hint @popup={{this.popup}} @title="Hint" @modalTitle="Hint">
+    <p>You will need the keyword <AuPill>a</AuPill> to be used as a predicate in your query.</p>
+  </Exercise::Hint>
+  <AuButton {{on "click" (fn this.showSnippet true)}}>
+    {{if this.isOpen "Hide solution" "Solution"}}
+  </AuButton>
+  <div class="codeblock {{if this.isOpen "is-visible"}}">
+    <CodeBlock
+      @code="
+        PREFIX mo: <http://purl.org/ontology/mo/>
+
+        DESCRIBE ?artist WHERE {
+          ?artist a mo:MusicArtist
+        } LIMIT 1"
+    />
+  </div>
+</div>
+
+<div class="exercise-links">
+  <AuLink 
+    @LinkRoute="hands-on.part1.exercise2" 
+    @icon="nav-left"
+    @iconAlignment="left"
+  >
+    <LinkTo @route="hands-on.part1.exercise1">Exercise Part 1 - 2</LinkTo>
+  </AuLink>
+</div>
