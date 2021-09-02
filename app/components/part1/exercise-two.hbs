@@ -1,0 +1,40 @@
+<div class="part1-exercise">
+  <AuHeading @level="4" @skin="4">2. Find what other types <AuPill>MusicArtist</AuPill> has a relationship to,
+  and what those relationships are.</AuHeading>
+  <AuHelpText>
+    The data point is: <AuPill>&lt;http://purl.org/ontology/mo/MusicArtist&gt;</AuPill>
+  </AuHelpText><br>
+
+  <Exercise::Hint @popup={{this.popup}} @title="Hint" @modalTitle="Hint">
+    <p>You will need the keyword <AuPill>a</AuPill> to be used as a predicate in your query.</p>
+  </Exercise::Hint>
+  <AuButton {{on "click" (fn this.showSnippet true)}}>
+    {{if this.isOpen "Hide solution" "Solution"}}
+  </AuButton>
+  <div class="codeblock {{if this.isOpen "is-visible"}}">
+    <CodeBlock
+      @code="
+        SELECT DISTINCT ?rel ?type WHERE {
+          ?artist a <http://purl.org/ontology/mo/MusicArtist>;
+            	        ?rel ?subject.
+        }"
+    />
+  </div>
+</div>
+
+<div class="exercise-links multiple">
+  <AuLink 
+    @LinkRoute="hands-on.part1.exercise1" 
+    @icon="nav-left"
+    @iconAlignment="left"
+  >
+    <LinkTo @route="hands-on.part1.exercise1">Exercise Part 1 - 1</LinkTo>
+  </AuLink>
+  {{!-- Exercise 3 doesn't exist yet! --}}
+  <AuLink
+    @icon="nav-right"
+    @iconAlignment="right"
+  >
+    <LinkTo @route="hands-on.part1.exercise2">Exercise Part 1 - 3</LinkTo>
+  </AuLink>
+</div>

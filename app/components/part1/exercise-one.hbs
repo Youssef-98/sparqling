@@ -4,7 +4,7 @@
     Make sure to use <AuPill>DISTINCT</AuPill> and <AuPill>LIMIT</AuPill> to prevent the editor from breaking!
   </AuHelpText><br>
 
-  <Exercise::Hint @popup={{this.popup}} @title="Hint" @modalTitle="rdf:type">
+  <Exercise::Hint @popup={{this.popup}} @title="Hint" @modalTitle="Hint">
     <p>You can use <AuPill>rdf:type</AuPill> in your query to get the types.</p>
   </Exercise::Hint>
   <AuButton {{on "click" (fn this.showSnippet true)}}>
@@ -21,4 +21,13 @@
         } LIMIT 10"
     />
   </div>
+</div>
+
+<div class="exercise-links part1-1">
+  <AuLink 
+    @icon="nav-right"
+    @iconAlignment="right"
+  >
+    <LinkTo @route="hands-on.part1.exercise2">Exercise Part 1 - 2</LinkTo>
+  </AuLink>
 </div>

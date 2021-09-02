@@ -147,23 +147,27 @@
 
 /* Links beneath the exercise */
 .exercise-links {
-  order: 3; /* sets the links beneath the question and editor of the exercise */
+  order: 3; /* sets the links beneath the exercise and editor of the exercise */
   width: 100%;
-  margin-top: 15px;
+  margin-top: 5rem;
   font-size: 18px;
 }
-/* link in part 1 - exercise 1 */
+/* two links to go back or to the next exercise */
+.exercise-links.multiple {
+  display: flex;
+  justify-content: space-between;
+}
+/* first or last exercise */
 .exercise-links.part1-1 {
   display: flex;
   justify-content: flex-end;
 }
 
-/* codeblock for the solution that's invisible when not clicked */
 .codeblock {
-  display: none;
+  display: none; /* codeblock for the solution that's invisible when not clicked */
 }
-/* Shows the codeblock for the solution when clicked */
+
 .codeblock.is-visible {
-  display: block;
+  display: block; /* Shows the codeblock for the solution when clicked */
   padding-right: 20px;
 }
